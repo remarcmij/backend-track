@@ -235,7 +235,7 @@ No breakdown needed—just notice that it implements the `Set` interface. Also, 
 
 ## Map.java
 
-`Map` is an interface of its own. It doesn't extend the `Collection` interface, but it can be transformed into a `Set` when iteration is needed. Maps and sets share similar characteristics.
+`Map` does not extend the `Collection` interface — it's a separate branch of the framework. This means you can't use a Map directly in a for-each loop. Instead, you convert it to a Set view using `entrySet()`, `keySet()`, or `values()`, as you'll see below. Under the hood, HashMap keys work just like a HashSet: no duplicates, no guaranteed order, and O(1) lookup.
 
 Maps are key-value dictionaries. Think of them as two-column tables: the first column holds keys, the second holds values, and each row represents an element. You choose the types for both keys and values during instantiation.
 
